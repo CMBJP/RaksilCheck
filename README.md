@@ -1,24 +1,28 @@
 # RaksilCheck
 
-> **설명**: RaksilCheck는 사용자가 직접 
+> **RaksilCheck**는 사용자가 오락실에서 플레이한 게임을 직접 기록하고, 사용한 금액을 쉽게 확인할 수 있도록 만든 웹앱입니다. 🎮💰
+---
 
-##  기능 및 개요
-- **PWA 및 오프라인 대응**: service worker를 통한 오프라인 기능 지원 (`sw.js`, `register-sw.js` 포함)
-- **모바일 앱처럼 설치 가능**: `manifest.json`을 통해 홈 화면에 설치 가능
-- **인터페이스 구성**:
-  - `index.html`: 기본 안내 페이지
-  - `main.css`: 스타일 정의
-  - `app.js`: 메인 기능 실행 로직
-- **아이콘 관리**: `/icons` 폴더 내 다양한 해상도 아이콘 제공
+## ✨ 주요 기능
+- 📱 **PWA 지원**: 웹앱 설치 후 오프라인에서도 사용 가능  
+- 🎮 **게임 기록 관리**: 플레이한 게임과 횟수를 간편하게 체크  
+- 🗓 **일별 기록 저장/불러오기**: 하루 단위 기록을 저장하고 이후 다시 확인 가능
 
-##  시작하기
-### 설치 및 실행
-```bash
-# 저장소 클론
-git clone https://github.com/CMBJP/RaksilCheck.git
-cd RaksilCheck
+---
 
-# 간단한 HTTP 서버 실행 (예: Python 사용 시)
-python3 -m http.server 8000
+## 🚀 시작하기
 
-# 또는 VSCode Live Server, npm 패키지 활용 가능
+### 🔗 설치 및 실행
+- 웹앱 주소:  
+  👉 [https://cmbjp.github.io/RaksilCheck/](https://cmbjp.github.io/RaksilCheck/)
+
+### 📲 설치 방법
+#### ✅ 안드로이드
+1. 위의 웹사이트에 접속  
+2. 하단 또는 브라우저 메뉴에서 **「홈 화면에 추가」** 선택  
+3. 만약 메뉴에 보이지 않을 경우, **브라우저 설정 → 홈 화면에 추가** 에서 진행  
+
+#### 🍎 iOS
+1. 위의 웹사이트에 접속  
+2. 하단의 **공유 버튼(⬆️)** 클릭  
+3. **「홈 화면에 추가」** 선택 후 설치 완료  
