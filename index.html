@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오락실 지출 체크</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <!-- iOS용 설치/전체화면 보완 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+</head>
+
+<body>
+
+    <header>
+        <h1>오락실 지출 체크</h1>
+    </header>
+
+    <main class="grid">
+        <!-- 게임 추가 -->
+        <section class="card grid">
+            <div class="row">
+                <input id="gameName" type="text" placeholder="게임 이름 (예: 츄니즘)" autocomplete="off">
+                <input id="gamePrice" type="number" inputmode="numeric" min="0" placeholder="1회 가격(원)">
+                <button id="addBtn" class="accent">게임 추가</button>
+            </div>
+            <div class="muted">예: 츄니즘 1000원, 마이마이 1000원</div>
+        </section>
+
+        <!-- 게임 목록 -->
+        <section class="card grid">
+            <div class="row" style="justify-content:space-between; align-items:center;">
+                <div class="total" id="total">총합: 0원</div>
+                <div class="badge" id="sessionBadge">오늘 0회</div>
+            </div>
+            <!-- 게임 목록을 담는 div -->
+            <div id="gameList" class="grid"></div>
+        </section>
+
+        <!-- 버튼 메뉴 -->
+        <section class="card grid">
+            <div class="row">
+                <button id="saveBtn" class="accent">오늘 기록 저장</button>
+                <!-- <button id="historyBtn">히스토리 보기</button> -->
+                <button id="resetCountsBtn">횟수만 초기화</button>
+                <button id="clearAllBtn"><span class="danger">모든 데이터 삭제</span></button>
+            </div>
+            <div class="muted">* 모든 데이터는 이 기기(브라우저)의 로컬에만 저장됩니다.</div>
+        </section>
+
+        <!-- 히스토리 -->
+        <section id="history" class="card grid" hidden>
+            <h3 style="margin:0;">히스토리</h3>
+            <!-- 히스토리 목록을 담는 div -->
+            <div id="historyList" class="grid"></div>
+        </section>
+    </main>
+
+
+    <!-- <div class="controls">
+        <input type="text" id="gameName" placeholder="게임 이름">
+        <input type="number" id="gamePrice" placeholder="1회 가격" min="0">
+        <button onclick="addGame()">게임 추가</button>
+    </div> -->
+
+    <!-- <div id="gameList" class="game-list"></div> -->
+
+    <!-- <div id="total">총합: 0원</div> -->
+
+    <!-- <div class="controls">
+        <button onclick="saveSession()">오늘 기록 저장</button>
+        <button onclick="clearAll()">초기화</button>
+    </div> -->
+
+    <script defer src="app.js"></script>
+    <script defer src="register-sw.js"></script>
+
+
+</body>
+
+</html>
